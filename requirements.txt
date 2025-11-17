@@ -1,0 +1,14 @@
+# Core dependencies for deep learning implementations
+numpy>=1.21.0
+matplotlib>=3.4.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Optional: for visualization and notebooks
+jupyter>=1.0.0
+seaborn>=0.11.0
+
+# Optional: for advanced examples
+scipy>=1.7.0

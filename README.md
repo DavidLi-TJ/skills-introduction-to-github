@@ -1,74 +1,130 @@
-<header>
+# Deep Learning Fundamentals
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+_Learn deep learning by implementing fundamental concepts from scratch._
 
-# Introduction to GitHub
+## Overview
 
-_Get started using GitHub in less than an hour._
+This repository provides educational implementations of core deep learning concepts, built from the ground up to help you understand how modern neural networks work. Each implementation is designed for clarity and learning, with detailed comments and examples.
 
-</header>
+## What You'll Learn
 
-<!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
--->
+- **Who is this for**: Students, researchers, and practitioners wanting to understand deep learning fundamentals
+- **What you'll learn**: Core concepts including softmax, attention mechanisms, transformers, and more
+- **What you'll build**: Working implementations of fundamental deep learning components
+- **Prerequisites**: Basic Python programming and familiarity with linear algebra
+- **Approach**: Learn by implementing - understand the math and code behind modern AI
 
-## Welcome
+## Contents
 
-People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. GitHub Skills’ “Introduction to GitHub” course guides you through everything you need to start contributing in less than an hour.
+### 1. **Activation Functions**
+   - Softmax implementation with numerical stability
+   - ReLU, Sigmoid, Tanh variants
+   - Forward and backward passes
 
-- **Who is this for**: New developers, new GitHub users, and students.
-- **What you'll learn**: We'll introduce repositories, branches, commits, and pull requests.
-- **What you'll build**: We'll make a short Markdown file you can use as your [profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-- **Prerequisites**: None. This course is a great introduction for your first day on GitHub.
-- **How long**: This course takes less than one hour to complete.
+### 2. **Neural Network Components**
+   - Linear layers with weight initialization
+   - Batch normalization
+   - Dropout for regularization
 
-In this course, you will:
+### 3. **Attention Mechanisms**
+   - Scaled dot-product attention
+   - Multi-head attention
+   - Self-attention visualization
 
-1. Create a branch
-2. Commit a file
-3. Open a pull request
-4. Merge your pull request
+### 4. **Transformer Architecture**
+   - Complete transformer implementation
+   - Positional encoding
+   - Encoder and decoder blocks
 
-### How to start this course
+## Getting Started
 
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'introduction-to-github',
-  owner: '@me',
-  name: 'skills-introduction-to-github',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+```bash
+# Clone the repository
+git clone https://github.com/DavidLi-TJ/skills-introduction-to-github.git
+cd skills-introduction-to-github
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=introduction-to-github&owner=%40me&name=skills-introduction-to-github&description=My+clone+repository&visibility=public)
+# Install dependencies
+pip install -r requirements.txt
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+# Run examples
+python examples/softmax_demo.py
+python examples/transformer_demo.py
+```
 
-<footer>
+## Project Structure
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+```
+├── deep_learning/          # Core implementations
+│   ├── activations.py      # Activation functions (softmax, relu, etc.)
+│   ├── layers.py           # Neural network layers
+│   ├── attention.py        # Attention mechanisms
+│   └── transformer.py      # Transformer architecture
+├── examples/               # Usage examples and demos
+├── tests/                  # Unit tests
+└── requirements.txt        # Python dependencies
+```
+
+## Learning Path
+
+1. **Start with Activations** (`deep_learning/activations.py`)
+   - Understand softmax and its numerical stability
+   - Learn about gradient computation
+
+2. **Build Neural Network Layers** (`deep_learning/layers.py`)
+   - Implement linear transformations
+   - Add normalization and regularization
+
+3. **Master Attention** (`deep_learning/attention.py`)
+   - Implement scaled dot-product attention
+   - Build multi-head attention from scratch
+
+4. **Create Transformers** (`deep_learning/transformer.py`)
+   - Combine all components into a transformer
+   - Understand positional encoding
+
+## Examples
+
+Each concept includes practical examples:
+
+```python
+# Softmax example
+from deep_learning.activations import softmax
+import numpy as np
+
+logits = np.array([2.0, 1.0, 0.1])
+probs = softmax(logits)
+print(f"Probabilities: {probs}")
+# Output: [0.659, 0.242, 0.099]
+```
+
+## Testing
+
+Run unit tests to verify implementations:
+
+```bash
+python -m pytest tests/
+```
+
+## Resources
+
+- **Mathematical Foundations**: Linear algebra, calculus basics
+- **Papers**: "Attention Is All You Need" (Vaswani et al., 2017)
+- **Further Reading**: Deep Learning Book by Goodfellow et al.
+
+## Contributing
+
+This is an educational repository. Feel free to:
+- Add more examples
+- Improve documentation
+- Fix bugs or add tests
+- Suggest new topics
+
+## License
+
+MIT License - See LICENSE file for details
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+Get help: [Post in discussions](https://github.com/DavidLi-TJ/skills-introduction-to-github/discussions) • [Report issues](https://github.com/DavidLi-TJ/skills-introduction-to-github/issues)
 
-&copy; 2024 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+© 2024 Educational Deep Learning Project
