@@ -2,6 +2,8 @@
 
 _Learn deep learning by implementing fundamental concepts from scratch._
 
+[English](README.md) | [简体中文](README_CN.md)
+
 ## Overview
 
 This repository provides educational implementations of core deep learning concepts, built from the ground up to help you understand how modern neural networks work. Each implementation is designed for clarity and learning, with detailed comments and examples.
